@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4"></div>
     <div class="col-4">
-      <img src="../assets/perfil.PNG" alt="foto_perfil">
+      <img src="../assets/perfil.jpg" alt="foto_perfil">
     </div>
     <div class="col-4"></div>
   </div>
@@ -36,7 +36,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <!-- <form>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Nome:</label>
                 <input type="text" class="form-control" id="recipient-name">
@@ -53,7 +53,17 @@
                 <label for="message-text" class="col-form-label">Feedback:</label>
                 <textarea class="form-control" id="message-text"></textarea>
               </div>
-            </form>
+            </form> -->
+            <div [formGroup]="grupo1" class="form-group">
+              <label for="recipient-name" class="col-form-label">Nome:</label>
+              <input type="text" formControlName="controle1" class="form-control" id="recipient-name">
+              <label for="recipient-name" class="col-form-label">Sobrenome:</label>
+              <input type="text" formControlName="controle2" class="form-control" id="recipient-name">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="text" formControlName="controle3" class="form-control" id="recipient-name">
+              <label for="message-text" class="col-form-label">Feedback:</label>
+              <textarea formControlName="controle4" class="form-control" id="message-text"></textarea>             
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-dismiss="modal">Close</button>
