@@ -1,40 +1,42 @@
 
 
 <!-- <form> -->
-  <div class="form-group" [formGroup]="cadastroMateria">
-    <label for="nome">Nome</label>
-    <input type="text" class="form-control" formControlName="nome" id="nomeId1" aria-describedby="emailHelp" placeholder="Nome">
-  </div>
-  <div class="form-group">
-    <label for="cargaHoraria">Carga horária de aula</label>
-    <input type="number" class="form-control" formControlName="cargaHoraria" id="cargaHorariaId1" placeholder="Carga Horária">
-  </div>
-  <div class="form-group">
-    <label for="escola">Escola</label>
-    <input type="text" class="form-control" formControlName="escola" id="escolaId1" placeholder="Escola">
-  </div>
-  <div class="form-group" formGroupName="professor">
-    <label for="professor">Professor(a)</label>
-    <select class="form-control" formControlName="professor" id="professorId1">
-      <option selected value="vivian">Vivian</option>
-      <option value="otavio">Otavio</option>
-      <option value="leandro">Leandro</option>
-      <option value="claudia">Cláudia</option>
-    </select>
-  </div>
-  <div formGroupName="modalidade">
-    <div class="form-check">
-      <input class="form-check-input" formControlName="opcional" type="radio" name="opcional" id="opcionalId1" value="opcional">
-      <label class="form-check-label" for="opcionalId1">
-        Opcional
-      </label>
+  <div [formGroup]="cadastroMateria">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" formControlName="nome" id="nomeId1" placeholder="Nome">
     </div>
-    <div class="form-check">
-      <input class="form-check-input" formControlName="obrigatoria" type="radio" name="obrigatoria" id="obrigatoriaId1" value="obrigatoria">
-      <label class="form-check-label" for="obrigatoriaId1">
-        Obrigatória
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
+      <div class="form-group">
+        <label for="cargaHoraria">Carga horária de aula</label>
+        <input type="number" class="form-control" formControlName="cargaHoraria" id="cargaHorariaId1" placeholder="Carga Horária">
+      </div>
+      <div class="form-group">
+        <label for="escola">Escola</label>
+        <input type="text" class="form-control" formControlName="escola" id="escolaId1" placeholder="Escola">
+      </div>
+      <div class="form-group" formGroupName="professor">
+        <label for="professor">Professor(a)</label>
+        <select class="form-control" formControlName="professor" id="professorId1">
+          <option selected value="vivian">Vivian</option>
+          <option value="otavio">Otavio</option>
+          <option value="leandro">Leandro</option>
+          <option value="claudia">Cláudia</option>
+        </select>
+      </div>
+      <div formGroupName="modalidade">
+        <div class="form-check">
+          <input class="form-check-input" formControlName="opcional" type="radio" name="opcional" id="opcionalId1" value="opcional">
+          <label class="form-check-label" for="opcionalId1">
+            Opcional
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" formControlName="obrigatoria" type="radio" name="obrigatoria" id="obrigatoriaId1" value="obrigatoria">
+          <label class="form-check-label" for="obrigatoriaId1">
+            Obrigatória
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" click="restaForms()">Enviar</button>
+  </div>  
 <!-- </form> -->
